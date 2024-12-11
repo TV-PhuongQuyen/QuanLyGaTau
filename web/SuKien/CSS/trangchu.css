@@ -1,0 +1,120 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Nov 14, 2024, 12:25:09 AM
+    Author     : PC
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    width: 98%;
+    min-height: 90vh;
+    padding: 0 10px;
+    display: flex;
+    background-image: url('../image/Background.jpg'); /* Thêm ảnh nền */
+    background-size: cover; /* Ảnh bao phủ toàn bộ màn hình */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    background-position: center; /* Canh giữa ảnh */
+    justify-content: center;
+    align-items: center;
+}
+#body{
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    padding: 15px 0px
+
+}
+#name{
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;   
+    font-weight: bold;
+}
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    position: relative;
+}
+
+ul li{
+    margin-right: 20px;
+    position: relative;
+    cursor: context-menu;
+}
+ul li:hover {
+    margin-right: 20px;
+    cursor: context-menu;
+    color: rgb(189, 9, 33); /* This will not change the link color */
+    transition: 0.3s ease-in-out;
+}
+
+/* Style the <a> inside <li> when <li> is hovered */
+ul li:hover a {
+    color: rgb(189, 9, 33); /* Changes the link color */
+    position: relative;
+}
+
+ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Hiển thị ngay bên dưới mục chính */
+    left: 0;
+    background-color: #f1f1f1;
+    padding: 10px 0;
+    border: 1px solid #ccc;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+    opacity: 0;
+    animation: slide-in 0.5s ease-in-out forwards; /* Áp dụng animation */
+}
+
+ul li:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    padding: 8px 20px;
+    cursor: pointer;
+    opacity: 0;
+    animation: slide-in 0.5s ease-in-out forwards; /* Animation mặc định */
+    animation-delay: var(--delay, 0s); /* Thời gian trễ của mỗi mục */
+}
+
+ul li:hover .submenu li {
+    opacity: 1;
+}
+
+/* Animation keyframes */
+@keyframes slide-in {
+    from {
+        transform: translateX(50px); /* Bắt đầu từ phải */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0); /* Đưa về vị trí ban đầu */
+        opacity: 1;
+    }
+}
+
+
+#container {
+    background-image: url('../image/Background.jpg'); /* Thêm ảnh nền */
+    background-size: 96%; /* Ảnh có chiều rộng 80% */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    background-position: center center; /* Canh giữa ảnh */
+    width: 100%; /* Độ rộng phần tử */
+    height: 400px; /* Chiều cao hoặc điều chỉnh theo nhu cầu */
+}
+#chon{
+    color: black;
+}
+
